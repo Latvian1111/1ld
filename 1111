@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+
+int main ()
+{
+
+
+
+int xa, ya, xb, yb, xc, yc;
+int aa, bb, cc;
+float a, b, c;
+float p;
+float s;
+int n;
+
+cout << "Ievadiet Trijstura virsotnes A vertibas x, y" << endl;
+cin >> xa >> ya;
+cout << "Ievadiet Trijstura virsotnes B vertibas x, y" << endl;
+cin >> xb >> yb;
+cout << "Ievadiet Trijstura virsotnes C vertibas x, y" << endl;
+cin >> xc >> yc;
+
+cc = pow(xb-xa , 2)+ pow(yb-ya, 2); // Iegust malas garumu pret virsotni A kvadratu
+aa = pow(xc-xb, 2)+ pow(yc-yb, 2); // Iegust malas garumu pret virsotni B kvadratu
+bb = pow (xa-xc, 2)+ pow(ya-yc, 2); // Iegust malas garumu pret virsotni C kvadratu
+a = pow (aa, 0.5); // Iegust malas garumu pret virsotni A
+b = pow (bb, 0.5); // Iegust malas garumu pret virsotni B
+c = pow (cc, 0.5); // Iegust malas garumu pret virsotni C
+p=(a+b+c)/2;
+
+s= pow(p*(p-a)*(p-b)*(p-c), 0.5); // laukums pec Herona formulas
+if (s==0)
+    cout << "Tas nav Trissturis" << endl;
+else cout << a <<endl << b << endl << c << endl << s << endl;
+
+
+    float va, vb, vc;
+    va=2*s/a;
+    vb=2*s/b;
+    vc=2*s/c;
+    cout << "Augstuma no virsotnes A garums ir: " << va << endl;
+    cout << "Augstuma no virsotnes B garums ir: " << vb << endl;
+    cout << "Augstuma no virsotnes C garums ir: " << vc << endl;
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// copyright by Peteriz
