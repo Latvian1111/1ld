@@ -4,7 +4,8 @@ using namespace std;
 
 int main ()
 {
-
+char atkartot;
+do{
 
 
 int xa, ya, xb, yb, xc, yc;
@@ -43,10 +44,11 @@ else cout << a <<endl << b << endl << c << endl << s << endl;
     cout << "Augstuma no virsotnes B garums ir: " << vb << endl;
     cout << "Augstuma no virsotnes C garums ir: " << vc << endl;
 
-return 0;
+    cout<<"Vai velies atkartot? j/n ";
+   cin>>atkartot;
+}while(atkartot=='j');
+
 }
-
-
 
 
 
